@@ -15,5 +15,6 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true, //每次构建前清理/dist目录
   },
 };
