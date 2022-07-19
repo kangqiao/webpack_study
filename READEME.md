@@ -19,3 +19,17 @@
 
 ### HtmlWebpackPlugin
 如果在代码编辑器中打开 index.html，你会看到 HtmlWebpackPlugin 创建了一个全新的文件，所有的 bundle 会自动添加到 html 中。
+
+### 使用 source map
+为了更容易地追踪 error 和 warning，JavaScript 提供了 source maps 功能，可以将编译后的代码映射回原始源代码。如果一个错误来自于 b.js，source map 就会明确的告诉你
+```javascript
+module.exports = {
+  mode: 'development',
+  devtool: 'inline-source-map',
+  ...
+}
+
+运行后:
+Uncaught ReferenceError: cosnole is not defined
+at HTMLButtonElement.printMe (print.js:2)
+```
