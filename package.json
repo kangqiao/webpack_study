@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "./node_modules/.bin/webpack --watch",
     "build": "./node_modules/.bin/webpack"
   },
   "keywords": [],

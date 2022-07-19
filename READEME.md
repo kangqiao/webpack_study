@@ -33,3 +33,21 @@ module.exports = {
 Uncaught ReferenceError: cosnole is not defined
 at HTMLButtonElement.printMe (print.js:2)
 ```
+
+### 使用 watch mode(观察模式)
+你可以指示 webpack "watch" 依赖图中所有文件的更改。如果其中一个文件被更新，代码将被重新编译，所以你不必再去手动运行整个构建。
+package.json
+```json
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  ...
+}
+```
