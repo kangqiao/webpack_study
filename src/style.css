@@ -1,4 +1,12 @@
+@font-face {
+    font-family: 'PlexSans';
+    src: url("./PlexSans.otf") format('otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
 .hello {
     color: red;
+    font-family: 'PlexSans';
     background: url('./icon.jpeg');
 }
