@@ -6,7 +6,7 @@ function component() {
   const btn = document.createElement('button');
 
   // lodash 在当前 script 中使用 import 引入
-  element.innerHTML = _.join(['Hello', 'webpack', '你好123!'], ' ');
+  element.innerHTML = _.join(['Hello', 'webpack', '你好1234!'], ' ');
 
   btn.innerHTML = 'Click me and check the console!';
   btn.onclick = printMe;
