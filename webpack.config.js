@@ -8,6 +8,9 @@ module.exports = {
     print: './src/print.js',
   },
   devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
@@ -18,4 +21,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true, //每次构建前清理/dist目录
   },
+  optimization: {
+    runtimeChunk: 'single',
+  }
 };

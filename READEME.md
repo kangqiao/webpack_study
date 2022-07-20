@@ -51,3 +51,25 @@ package.json
   ...
 }
 ```
+
+### 使用 webpack-dev-server
+webpack-dev-server 为你提供了一个基本的 web server，并且具有 live reloading(实时重新加载) 功能。设置如下：
+
+`npm install --save-dev webpack-dev-server`
+
+webpack.config.js
+```json
+module.exports = {
+  ...
+  devServer: {
+    static: './dist'
+  },
+  ...
+  optimization: {
+    runtimeChunk: 'single'
+  }
+}
+```
+以上配置告知 webpack-dev-server，将 dist 目录下的文件 serve 到 localhost:8080 下。（译注：serve，将资源作为 server 的可访问文件）
+webpack-dev-server 在编译之后不会写入到任何输出文件。而是将 bundle 文件保留在内存中，然后将它们 serve 到 server 中，就好像它们是挂载在 server 根路径上的真实文件一样。如果你的页面希望在其他不同路径中找到 bundle 文件，则可以通过 dev server 配置中的 devMiddleware.publicPath 选项进行修改。
+
